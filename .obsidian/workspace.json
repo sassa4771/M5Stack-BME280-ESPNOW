@@ -1,0 +1,202 @@
+{
+  "main": {
+    "id": "7a49b4f15e6e28f4",
+    "type": "split",
+    "children": [
+      {
+        "id": "00113e6da5db347c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "099b7c987e7b2c82",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "説明/生徒向け使い方ガイド.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "生徒向け使い方ガイド"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "02296bd5de29f63a",
+    "type": "split",
+    "children": [
+      {
+        "id": "2665384ce94ca1a5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "44d4ff1f9484177e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "ファイルエクスプローラ"
+            }
+          },
+          {
+            "id": "f898c58931cc05f1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "検索"
+            }
+          },
+          {
+            "id": "c6c5bf6420161dcd",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "ブックマーク"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "5f5239ea8993b059",
+    "type": "split",
+    "children": [
+      {
+        "id": "927dd23b8c1dfd2f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "047fefda086a2e1c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "説明/生徒向け使い方ガイド.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "生徒向け使い方ガイドへのバックリンク"
+            }
+          },
+          {
+            "id": "ffc07bcbf616515c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "説明/生徒向け使い方ガイド.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "生徒向け使い方ガイドからのアウトゴーイングリンク"
+            }
+          },
+          {
+            "id": "cdf8d85e12dc81bd",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "タグ"
+            }
+          },
+          {
+            "id": "cf22f608b1d14afd",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "すべてのプロパティ"
+            }
+          },
+          {
+            "id": "491678a6e1489804",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "説明/生徒向け使い方ガイド.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "生徒向け使い方ガイドのアウトライン"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:クイックスイッチャーを開く": false,
+      "graph:グラフビューを開く": false,
+      "canvas:新規キャンバスを作成": false,
+      "daily-notes:今日のデイリーノートを開く": false,
+      "templates:テンプレートを挿入": false,
+      "command-palette:コマンドパレットを開く": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "099b7c987e7b2c82",
+  "lastOpenFiles": [
+    "説明/arduino_ide_screen.png",
+    "説明/84715.jpg",
+    "説明/生徒向け使い方ガイド.md",
+    "説明/Pasted image 20260110220847.png",
+    "説明/Pasted image 20260110000629.png",
+    "説明/84723.jpg",
+    "説明/Pasted image 20260109224859.png",
+    "説明/Pasted image 20260109235859.png",
+    "説明/Pasted image 20260109235808.png",
+    "説明/Pasted image 20260109235737.png",
+    "説明/Pasted image 20260109235527.png",
+    "Clusterのクレジット・案内 (1).pptx",
+    "README.md"
+  ]
+}

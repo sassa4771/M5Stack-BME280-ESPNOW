@@ -136,7 +136,7 @@ void loop() {
     temp = bme.readTemperature();          // 温度 (℃)
     hum  = bme.readHumidity();             // 湿度 (%)
     pres = bme.readPressure() / 100.0F;    // 気圧 (hPaに変換)
-    
+    M5.Lcd.setCursor(0,0);
     // --- ディスプレイ表示の更新 ---
     M5.Lcd.fillScreen(BLACK); 
     

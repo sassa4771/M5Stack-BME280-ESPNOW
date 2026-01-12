@@ -230,7 +230,6 @@ void loop() {
     // --- ディスプレイ表示の更新 ---
     M5.Lcd.fillScreen(BLACK); 
     M5.Lcd.setCursor(0, 0);
-    
     M5.Lcd.setTextColor(WHITE);
     M5.Lcd.printf("ID: %s\n", DEVICE_ID);
     M5.Lcd.printf("Temp: %.2f C\n", temp);
