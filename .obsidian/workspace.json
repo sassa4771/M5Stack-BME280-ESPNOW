@@ -11,12 +11,14 @@
             "id": "099b7c987e7b2c82",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "説明/Pasted image 20260113103324.png"
+                "file": "説明/生徒向け使い方ガイド.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260113103324"
+              "icon": "lucide-file",
+              "title": "生徒向け使い方ガイド"
             }
           }
         ]
@@ -51,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Pythonスクリプトを実行",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -92,17 +94,17 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "説明/生徒向け使い方ガイド.md",
+                "file": "説明/Pasted image 20260109230406.png",
                 "collapseAll": false,
-                "extraContext": false,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "生徒向け使い方ガイドへのバックリンク"
+              "title": "Pasted image 20260109230406へのバックリンク"
             }
           },
           {
@@ -111,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "説明/生徒向け使い方ガイド.md",
+                "file": "説明/Pasted image 20260109230406.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "生徒向け使い方ガイドからのアウトゴーイングリンク"
+              "title": "Pasted image 20260109230406からのアウトゴーイングリンク"
             }
           },
           {
@@ -163,12 +165,12 @@
               "title": "生徒向け使い方ガイドのアウトライン"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,17 +185,21 @@
   },
   "active": "099b7c987e7b2c82",
   "lastOpenFiles": [
-    "説明/生徒向け使い方ガイド.md",
     "説明/Pasted image 20260114125851.png",
-    "説明/Pasted image 20260114125314.png",
     "説明/Pasted image 20260114015402.png",
-    "説明/Pasted image 20260113103324.png",
-    "説明/arduino_ide_screen.png",
-    "説明/84715.jpg",
-    "説明/Pasted image 20260110220847.png",
-    "説明/Pasted image 20260110000629.png",
-    "説明/84723.jpg",
+    "説明/生徒向け使い方ガイド.md",
+    "python/x.py",
+    "python/lesson5.py",
+    "説明/Pasted image 20260109230406.png",
+    "説明/Pasted image 20260109224735.png",
     "説明/Pasted image 20260109224859.png",
+    "説明/Pasted image 20260109224431.png",
+    "説明/Pasted image 20260109224047.png",
+    "説明/Pasted image 20260109225324.png",
+    "説明/Pasted image 20260109231457.png",
+    "説明/Pasted image 20260113103324.png",
+    "説明/Pasted image 20260110220847.png",
+    "説明/attachments",
     "Clusterのクレジット・案内 (1).pptx",
     "README.md"
   ]

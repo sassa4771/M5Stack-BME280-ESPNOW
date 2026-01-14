@@ -11,6 +11,8 @@ Adafruit_BME280 bme;
 float temp = 0; //温度の値
 float hum = 0;  //湿度の値
 float pres = 0; //圧力の値
+// このデバイスのID（識別番号）
+const char DEVICE_ID[] = "B1";  // 例: "A1", "B2"など
 
 void setup() {
     // M5StickC Plusの初期化
