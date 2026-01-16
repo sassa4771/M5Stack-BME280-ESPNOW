@@ -11,18 +11,6 @@
             "id": "099b7c987e7b2c82",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "説明/attachments/Pasted image 20260109232636.png"
-              },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260109232636"
-            }
-          },
-          {
-            "id": "ca4d616974069876",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
                 "file": "説明/生徒向け使い方ガイド.md",
@@ -33,8 +21,7 @@
               "title": "生徒向け使い方ガイド"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -196,19 +183,23 @@
       "bases:Create new base": false
     }
   },
-  "active": "ca4d616974069876",
+  "active": "099b7c987e7b2c82",
   "lastOpenFiles": [
-    "無題のファイル.md",
+    "説明/attachments/unused_20260109235859.png",
+    "説明/attachments/unused_20260109235808.png",
+    "説明/attachments/unused_20260109235737.png",
+    "説明/attachments/unused_20260109235527.png",
+    "説明/attachments/unused_20260109235523.png",
+    "説明/attachments/unused_20260109231423.png",
+    "説明/attachments/unused_20260109224735.png",
+    "説明/attachments/device_manager.png",
+    "説明/attachments/lesson3_serial_monitor.png",
+    "説明/attachments/lesson3_running.jpg",
+    "説明/attachments/espnow_setup.png",
+    "attachments/Pasted.md",
     "説明/生徒向け使い方ガイド.md",
-    "説明/attachments/Pasted image 20260109232636.png",
-    "説明/attachments/Pasted image 20260114150609.png",
-    "説明/attachments/Pasted image 20260116150836.png",
-    "説明/attachments/Pasted image 20260116145823.png",
-    "説明/attachments/Pasted image 20260116150708.png",
-    "説明/attachments/Pasted image 20260116145259.png",
-    "説明/attachments/Pasted image 20260116150557.png",
-    "説明/attachments/Pasted image 20260115153629.png",
-    "説明/attachments/Pasted image 20260116144037.png",
+    "attachments",
+    "無題のファイル.md",
     "Arduino/lesson/lesson7.ino",
     "Arduino/lesson/lesson5.ino",
     "Arduino/lesson/lesson4.ino",
@@ -216,10 +207,8 @@
     "Arduino/lesson/lesson3.1.ino",
     "Arduino/lesson/lesson2.ino",
     "Arduino/lesson/lesson1.ino",
-    "説明/attachments/Pasted image 20260114125851.png",
     "python/x.py",
     "python/lesson5.py",
-    "説明/attachments",
     "README.md"
   ]
 }
