@@ -135,18 +135,19 @@ void setup() {
 // グラフを描画する関数
 // value: 現在取得した値（温度、湿度、気圧など）
 void drawGraph(float value) {
-    // 履歴データに追加
+    // 新しい値を配列に保存
     tempHistory[historyIndex] = value;
     historyIndex++;
+    // 配列の最後まで来たら最初に戻る
     if (historyIndex >= GRAPH_HISTORY_SIZE) {
         historyIndex = 0;
         historyFilled = true;
     }
     
-    // グラフ領域をクリア
+    // グラフを描く場所を黒で塗りつぶす
     M5.Lcd.fillRect(GRAPH_X_START, GRAPH_Y_START, GRAPH_WIDTH, GRAPH_HEIGHT, BLACK);
     
-    // グラフの枠線を描画
+    // グラフの枠を白い線で描く
     M5.Lcd.drawRect(GRAPH_X_START, GRAPH_Y_START, GRAPH_WIDTH, GRAPH_HEIGHT, WHITE);
     
     // データの最大値と最小値を計算
@@ -155,8 +156,17 @@ void drawGraph(float value) {
     
     if (dataCount == 0) return;
     
+    // 最大値と最小値を計算（循環バッファを考慮）
     for (int i = 0; i < dataCount; i++) {
-        float val = tempHistory[i];
+        int idx;
+        if (historyFilled) {
+            // 配列が満杯の場合、historyIndexから時系列順に取得
+            idx = (historyIndex + i) % GRAPH_HISTORY_SIZE;
+        } else {
+            // 配列が満杯でない場合、0から順番に取得
+            idx = i;
+        }
+        float val = tempHistory[idx];
         if (val < minVal) minVal = val;
         if (val > maxVal) maxVal = val;
     }
@@ -170,11 +180,23 @@ void drawGraph(float value) {
     // グラフの線を描画
     if (dataCount > 1) {
         for (int i = 0; i < dataCount - 1; i++) {
+            // 時系列順にデータを取得（循環バッファを考慮）
+            int idx1, idx2;
+            if (historyFilled) {
+                // 配列が満杯の場合、historyIndexから時系列順に取得
+                idx1 = (historyIndex + i) % GRAPH_HISTORY_SIZE;
+                idx2 = (historyIndex + i + 1) % GRAPH_HISTORY_SIZE;
+            } else {
+                // 配列が満杯でない場合、0から順番に取得
+                idx1 = i;
+                idx2 = i + 1;
+            }
+            
             int x1 = GRAPH_X_START + 5 + (i * (GRAPH_WIDTH - 10) / (dataCount - 1));
-            int y1 = GRAPH_Y_START + GRAPH_HEIGHT - 5 - ((tempHistory[i] - minVal) * (GRAPH_HEIGHT - 10) / (maxVal - minVal));
+            int y1 = GRAPH_Y_START + GRAPH_HEIGHT - 5 - ((tempHistory[idx1] - minVal) * (GRAPH_HEIGHT - 10) / (maxVal - minVal));
             
             int x2 = GRAPH_X_START + 5 + ((i + 1) * (GRAPH_WIDTH - 10) / (dataCount - 1));
-            int y2 = GRAPH_Y_START + GRAPH_HEIGHT - 5 - ((tempHistory[i + 1] - minVal) * (GRAPH_HEIGHT - 10) / (maxVal - minVal));
+            int y2 = GRAPH_Y_START + GRAPH_HEIGHT - 5 - ((tempHistory[idx2] - minVal) * (GRAPH_HEIGHT - 10) / (maxVal - minVal));
             
             // 範囲チェック
             if (y1 < GRAPH_Y_START + 5) y1 = GRAPH_Y_START + 5;
@@ -184,16 +206,6 @@ void drawGraph(float value) {
             
             M5.Lcd.drawLine(x1, y1, x2, y2, GREEN);
         }
-    }
-    
-    // 現在の値を点で表示
-    if (dataCount > 0) {
-        int lastIdx = (historyIndex - 1 + GRAPH_HISTORY_SIZE) % GRAPH_HISTORY_SIZE;
-        int x = GRAPH_X_START + 5 + ((dataCount - 1) * (GRAPH_WIDTH - 10) / max(1, dataCount - 1));
-        int y = GRAPH_Y_START + GRAPH_HEIGHT - 5 - ((tempHistory[lastIdx] - minVal) * (GRAPH_HEIGHT - 10) / (maxVal - minVal));
-        if (y < GRAPH_Y_START + 5) y = GRAPH_Y_START + 5;
-        if (y > GRAPH_Y_START + GRAPH_HEIGHT - 5) y = GRAPH_Y_START + GRAPH_HEIGHT - 5;
-        M5.Lcd.fillCircle(x, y, 3, YELLOW);
     }
     
     // 最小値と最大値を表示

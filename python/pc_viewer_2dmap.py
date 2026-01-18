@@ -61,7 +61,7 @@ def main():
     
     # 温度の範囲を10度～40度に固定してヒートマップ表示
     if args.metric == "t":
-        vmin, vmax = 10.0, 40.0
+        vmin, vmax = 15.0, 25.0
         cmap = "coolwarm"  # 温度に適したカラーマップ
     else:
         vmin, vmax = None, None

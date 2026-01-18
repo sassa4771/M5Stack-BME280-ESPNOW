@@ -204,7 +204,7 @@ def main():
                 pass
 
         now = time.time()
-        if now - last_draw >= 1.0:
+        if now - last_draw >= 0.1:
             # 4x4（NaNあり）→ NaN埋め → 80x80補間データ
             grid_raw = build_grid(args.metric)
             grid_filled = inpaint_nans_iterative(grid_raw, metric=args.metric)
