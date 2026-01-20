@@ -14,14 +14,19 @@ float pres = 0; //圧力の値
 // グラフを表示するための設定
 const int GRAPH_HISTORY_SIZE = 20;  // グラフに表示するデータの数
 const int GRAPH_X_START = 0;        // グラフの左端の位置
-const int GRAPH_Y_START = 80;       // グラフの上端の位置
-const int GRAPH_WIDTH = 240;        // グラフの幅
-const int GRAPH_HEIGHT = 50;        // グラフの高さ
+const int GRAPH_Y_START = 50;       // グラフの上端の位置
+const int GRAPH_WIDTH = 220;        // グラフの幅
+const int GRAPH_HEIGHT = 80;        // グラフの高さ
 
 // 過去の温度データを保存する配列
 float tempHistory[GRAPH_HISTORY_SIZE];
 int historyIndex = 0; // 次にデータを保存する位置
 bool historyFilled = false; // 配列が満杯になったかどうか
+
+// グラフの表示範囲を保持（急な変化でも範囲が変わらないように）
+float graphMinVal = 0;  // グラフの最小値
+float graphMaxVal = 0;  // グラフの最大値
+bool graphRangeInitialized = false; // 範囲が初期化されたかどうか
 
 // ========================
 
@@ -94,11 +99,34 @@ void drawGraph(float value) {
         if (val > maxVal) maxVal = val;
     }
     
-    // 値の範囲を少し広げる
-    float range = maxVal - minVal;
-    if (range < 1.0) range = 1.0;  // 最小範囲を確保
-    minVal -= range * 0.1;
-    maxVal += range * 0.1;
+    // グラフの表示範囲を決定（急な変化でも範囲が変わらないように）
+    if (!graphRangeInitialized) {
+        // 初回は現在のデータ範囲に余裕を持たせて設定
+        float range = maxVal - minVal;
+        if (range < 1.0) range = 1.0;  // 最小範囲を確保
+        graphMinVal = minVal - range * 0.2;  // 上下20%の余裕
+        graphMaxVal = maxVal + range * 0.2;
+        graphRangeInitialized = true;
+    } else {
+        // 既に範囲が設定されている場合、新しい値が範囲外に出た場合のみ拡張
+        float margin = (graphMaxVal - graphMinVal) * 0.1;  // 現在の範囲の10%をマージンとして使用
+        if (maxVal > graphMaxVal - margin) {
+            // 上限に近づいたら、余裕を持たせて拡張
+            float range = graphMaxVal - graphMinVal;
+            if (range < 1.0) range = 1.0;
+            graphMaxVal = maxVal + range * 0.2;  // 20%の余裕を追加
+        }
+        if (minVal < graphMinVal + margin) {
+            // 下限に近づいたら、余裕を持たせて拡張
+            float range = graphMaxVal - graphMinVal;
+            if (range < 1.0) range = 1.0;
+            graphMinVal = minVal - range * 0.2;  // 20%の余裕を追加
+        }
+    }
+    
+    // 表示用の範囲を設定
+    minVal = graphMinVal;
+    maxVal = graphMaxVal;
     
     // グラフの線を描画
     if (dataCount > 1) {
