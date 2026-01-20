@@ -30,32 +30,66 @@ def main():
                 if not decoded:
                     continue
                 
-                data = json.loads(decoded)
+                # まず1行全体をJSONとして解析を試みる
+                try:
+                    data = json.loads(decoded)
+                    print(json.dumps(data, ensure_ascii=False))
+                    continue
+                except json.JSONDecodeError:
+                    # 1行全体がJSONでない場合、複数のJSONが含まれている可能性がある
+                    pass
+                
+                # 複数のJSONが1行に含まれている場合、完全なJSONオブジェクトを抽出
+                buffer = ""
+                brace_count = 0
+                in_string = False
+                escape_next = False
+                
+                for char in decoded:
+                    if escape_next:
+                        buffer += char
+                        escape_next = False
+                        continue
+                    
+                    if char == '\\':
+                        buffer += char
+                        escape_next = True
+                        continue
+                    
+                    if char == '"' and not escape_next:
+                        in_string = not in_string
+                        buffer += char
+                        continue
+                    
+                    if not in_string:
+                        if char == '{':
+                            if brace_count == 0:
+                                # 新しいJSONオブジェクトの開始
+                                buffer = char
+                            else:
+                                buffer += char
+                            brace_count += 1
+                        elif char == '}':
+                            buffer += char
+                            brace_count -= 1
+                            if brace_count == 0:
+                                # 完全なJSONオブジェクトが見つかった
+                                try:
+                                    data = json.loads(buffer)
+                                    print(json.dumps(data, ensure_ascii=False))
+                                except json.JSONDecodeError:
+                                    # 壊れたJSONは無視
+                                    pass
+                                buffer = ""
+                        else:
+                            if brace_count > 0:
+                                buffer += char
+                    else:
+                        buffer += char
 
-                # データ型に応じた表示
-                msg_type = data.get("type")
-
-                if msg_type == "sample":
-                    # センサーデータの表示
-                    dev_id = data.get("id", "Unknown")
-                    t = data.get("t", 0.0)
-                    h = data.get("h", 0.0)
-                    p = data.get("p", 0.0)
-                    print(f"[{time.strftime('%H:%M:%S')}] ID:{dev_id} | 温度:{t:>5.2f}°C | 湿度:{h:>5.2f}% | 気圧:{p:>7.2f}hPa")
-
-                elif msg_type == "gateway_boot":
-                    # 起動メッセージの表示
-                    print(f"--- ゲートウェイ起動: MAC={data.get('mac')} ---")
-
-                else:
-                    # その他のJSONデータ
-                    print(f"受信データ: {data}")
-
-            except json.JSONDecodeError:
-                # JSONじゃない文字列（デバッグログなど）が流れてきた場合
-                print(f"Rawログ: {decoded}")
-            except Exception as e:
-                print(f"解析エラー: {e}")
+            except Exception:
+                # 予期しないエラーは無視（壊れたデータの可能性）
+                pass
 
     except KeyboardInterrupt:
         print("\n終了します。")

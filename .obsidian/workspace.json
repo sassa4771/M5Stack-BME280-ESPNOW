@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "5f5239ea8993b059",
@@ -185,8 +186,12 @@
   },
   "active": "b4f5fd78ee47b3e9",
   "lastOpenFiles": [
-    "説明/attachments/pythonG.png",
+    "説明/attachments/lesson3_serial_monitor.png",
+    "説明/attachments/lesson3_running.jpg",
     "説明/生徒向け使い方ガイド.md",
+    "説明/attachments/Pasted image 20260120172500.png",
+    "説明/attachments/arduino_ide_download.png",
+    "説明/attachments/pythonG.png",
     "README.md",
     "説明/attachments/lesson5.png",
     "attachments/Pasted.md",
@@ -195,9 +200,6 @@
     "説明/attachments/Pasted image 20260116162053.png",
     "説明/attachments/Pasted image 20260116161853.png",
     "説明/attachments/unused_20260109235859.png",
-    "説明/attachments/unused_20260109235808.png",
-    "説明/attachments/unused_20260109235737.png",
-    "説明/attachments/unused_20260109235527.png",
     "attachments",
     "無題のファイル.md",
     "Arduino/lesson/lesson7.ino",
