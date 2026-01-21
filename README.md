@@ -178,7 +178,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 1. [Python公式サイト](https://www.python.org/downloads/)からPython 3.7以上をダウンロード・インストール
 2. インストール時に「Add Python to PATH」にチェックを入れることを推奨します
 
-## 3.3. 必要なライブラリのインストール
+## 3.4. 必要なライブラリのインストール
 
 ### ステップ1: VSCodeでターミナルを開く
 
@@ -223,7 +223,7 @@ VSCodeでターミナルを開く方法は3つあります：
 
 #### Arduino IDEの画面構成
 Arduino IDEを開くと、以下のような画面が表示されます：
-![Arduino IDE画面](attachments/fig1-13.png)
+![Arduino IDE画面](attachments/画像40.png)
   - メニューバー（ファイル、編集、スケッチ、ツールなど）
   - コードエディタ（中央の白い部分）
   - ツールバー（コンパイル、アップロードボタン）
