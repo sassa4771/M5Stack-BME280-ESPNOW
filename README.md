@@ -74,7 +74,7 @@
 
 > [!TIP]
 > 画像のようにSoftware Updateが表示される場合、更新の必要がない場合は「NOT NOW」を押してください。
-> ![アップデートの表示対処方法](attachments/fig1-4.png)
+> ![アップデートの表示対処方法](attachments/fig11-1.png)
 
 ### 2.2. ESP32ボードの追加
 
@@ -85,13 +85,13 @@ Arduino IDEには最初からESP32の設定が入っていないので、追加�
 1. Arduino IDEを開く
 2. **ファイル > 基本設定**をクリック
 
-![Arduino環境設定](attachments/fig1-5.png)
+![Arduino環境設定](attachments/fig1-4.png)
 - 説明: Arduino IDEの環境設定画面
 - 「追加のボードマネージャーのURL」の欄が表示されている
 
 **ステップ2: ボードマネージャーのURLを追加**
 
-![ボードマネージャーURL追加](attachments/fig1-6.png)
+![ボードマネージャーURL追加](attachments/fig1-5.png)
 
 3. **矢印の箇所をクリックして追加のボードマネージャーのURL**の欄に以下を追加：
 ```
@@ -104,7 +104,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 **ステップ3: ボードマネージャーを開く**
 
-![ボードマネージャーを開く](attachments/fig1-7.png)
+![ボードマネージャーを開く](attachments/fig1-6.png)
 
 5. **ツール > ボード > ボードマネージャー**を開く
 
@@ -117,9 +117,10 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 9. 検索欄に「**M5Stack**」と入力
 10. 「M5Stack」を探して、バージョン3.2.5を選択してインストールをクリック
 11. インストールが完了するまで待つ（数分かかります）
-![ESP32とM5Stackインストール確認](attachments/fig1-8.png)
 
 写真の位置に「esp32」「M5Stack」があれば正しくインストールできています。
+
+![ESP32とM5Stackインストール確認](attachments/fig1-7.png)
 
 ### 2.3. ライブラリのインストール
 
@@ -127,7 +128,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 1. **ツール > ライブラリを管理**を開く
 
-![ライブラリマネージャー](attachments/fig1-11.png)
+![ライブラリマネージャー](attachments/fig1-8.png)
 
 2. 検索欄にライブラリ名を入力して、それぞれインストール：
 
@@ -535,7 +536,7 @@ M5StickCからM5StackにBME280のデータをESP-NOWという無線通信で送�
 
 1. **ファイル > 開く**で`Arduino/lesson/lesson3/lesson3_M5Stack.ino`を開く
 2. **ツール > ボード > esp32**で「**M5Stack-Core-ESP32**」を選択
-   ![M5Stack-Core-ESP32選択](attachments/fig5-1.png)
+   ![M5Stack-Core-ESP32選択](attachments/fig5-2.png)
 3. **ツール > シリアルポート**でM5Stackのシリアルポートを選択（※COM3などが表示されるが、人によって異なります）
 
 4. **コンパイル**して、**アップロード**
