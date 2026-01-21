@@ -161,7 +161,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 2. インストーラーを実行してインストール
 3. Visual Studio Codeを起動
 
-**ステップ4: プロジェクトフォルダを開く**
+## 3.2. プロジェクトフォルダを開く
 
 1. Visual Studio Codeを起動したら、**ファイル > フォルダーを開く**をクリック
 2. [1.3. 準備するプログラム](#13-準備するプログラム)でダウンロード・展開したフォルダ内の`python`フォルダを選択
@@ -172,7 +172,8 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 > [!TIP]
 > フォルダのパス例: `デスクトップ\M5Stack-BME280-ESPNOW-main\python`
 
-## 3.2. Pythonのインストール
+
+## 3.3. Pythonのインストール
 
 1. [Python公式サイト](https://www.python.org/downloads/)からPython 3.7以上をダウンロード・インストール
 2. インストール時に「Add Python to PATH」にチェックを入れることを推奨します
