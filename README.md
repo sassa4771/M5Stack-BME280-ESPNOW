@@ -36,7 +36,7 @@
 - **Arduino IDE**（マイコン用にプログラムを作成するのに使用）
 - **Visual Studio Code (VSCode)**（Pythonのプログラムを動かすのに使用）
 
-![ソフトウェアの準備2](attachments/fig1-22.png)
+![ソフトウェアの準備22](attachments/fig1-22.png)
 
 ### 1.3. 準備するプログラム
 
