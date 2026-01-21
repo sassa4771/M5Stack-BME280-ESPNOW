@@ -118,7 +118,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 10. 「M5Stack」を探して、バージョン3.2.5を選択してインストールをクリック
 11. インストールが完了するまで待つ（数分かかります）
 
-写真の位置に「esp32」「M5Stack」があれば正しくインストールできています。
+> ![IMPORTANT] 写真の位置に「esp32」「M5Stack」があれば正しくインストールできています。
 
 ![ESP32とM5Stackインストール確認](attachments/fig1-7.png)
 
