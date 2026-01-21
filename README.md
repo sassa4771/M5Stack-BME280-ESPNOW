@@ -229,10 +229,13 @@ BME280はかなり有名なセンサーで、いろんなボードがありま�
 
 いいえ、BME280センサーはどこのメーカーも同じものを使っています。
 ボードは複数ありますが、使っているセンサーはみな一緒です（下のやつがBME280）
-![BME280センサー拡大](attachments/fig2-2.png)
-参考：BME280データシート
 
-[https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BME280/master/res/Grove-Barometer_Sensor-BME280-.pdf](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BME280/master/res/Grove-Barometer_Sensor-BME280-.pdf)
+![BME280センサー拡大](attachments/fig2-2.png)
+
+> [!NOTE]
+> 参考：BME280データシート
+> [https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BME280/master/res/Grove-Barometer_Sensor-BME280-.pdf](https://raw.githubusercontent.com/SeeedDocument/Grove-Barometer_Sensor-BME280/master/res/Grove-Barometer_Sensor-BME280-.pdf)
+
 #### 測定できるもの
 
 - **温度（Temperature）**: 周囲の温度を摂氏（°C）で測定します
