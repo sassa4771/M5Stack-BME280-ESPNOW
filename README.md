@@ -180,8 +180,28 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 ## 3.3. 必要なライブラリのインストール
 
-1. コマンドプロンプト（Windows）またはターミナル（Mac）を開く
-2. 以下のコマンドを実行してライブラリをインストール：
+### ステップ1: VSCodeでターミナルを開く
+
+VSCodeでターミナルを開く方法は3つあります：
+
+**方法1: メニューから開く**
+- **ターミナル > 新しいターミナル** をクリック
+
+**方法2: ショートカットキーを使う**
+- Windows: `Ctrl + Shift + @`（日本語キーボードでは `Ctrl + Shift + @`）
+- Mac: `Cmd + Shift + @`
+
+**方法3: 画面上部のアイコンから開く**
+
+![VSCodeターミナルを開く](attachments/fig7-2.png)
+
+ターミナルが開くと、VSCodeの下部にコマンド入力エリアが表示されます。
+
+![VSCodeターミナルでコマンド実行](attachments/fig7-3.png)
+
+### ステップ2: ライブラリをインストール
+
+ターミナルで以下のコマンドを実行してライブラリをインストール：
    ```bash
    pip install pyserial matplotlib numpy scipy
    ```
