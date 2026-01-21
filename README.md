@@ -91,8 +91,6 @@ Arduino IDEには最初からESP32の設定が入っていないので、追加�
 
 **ステップ2: ボードマネージャーのURLを追加**
 
-![ボードマネージャーURL追加](attachments/fig1-5.png)
-
 3. **矢印の箇所をクリックして追加のボードマネージャーのURL**の欄に以下を追加：
 ```
 https://static-cdn.m5stack.com/resource/arduino/package_m5stack_index.json
@@ -102,12 +100,14 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 4. **OK**をクリック
 
+![ボードマネージャーURL追加](attachments/fig1-5.png)
+
 **ステップ3: ボードマネージャーを開く**
 
-![ボードマネージャーを開く](attachments/fig1-6.png)
 
 5. **ツール > ボード > ボードマネージャー**を開く
 
+![ボードマネージャーを開く](attachments/fig1-6.png)
 
 **ステップ4: ESP32とM5Stackをインストール**
 
