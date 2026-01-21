@@ -22,11 +22,11 @@
 
 ### 1.1. 準備するハードウェア
 
-- **Groveコネクター**（lesson1-3, lesson7用）
-- **BME280**（lesson1-3, lesson7用）
-- **M5StickC Plus**（lesson1-3, lesson7用）
-- **M5Stack**（lesson4-5用）
-- **USB Type-C ケーブル**（データ転送対応のもの）
+- **Groveコネクター**
+- **BME280**
+- **M5StickC Plus**
+- **M5Stack**
+- **USB Type-C ケーブル**
 
 ![ハードウェアの準備](attachments/fig1-1.png)
 
