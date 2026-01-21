@@ -66,7 +66,34 @@
 
 ## 2. Arduino IDEの設定
 
-### 2.1. Arduino IDEのインストール
+
+### 2.1. Arduino IDEとは？
+
+**Arduino IDE**は、ArduinoやESP32などのマイコンにプログラムを書き込むためのソフトウェアです。無料でダウンロードできます。
+
+#### 基本的な用語
+
+- **スケッチ（Sketch）**: Arduinoのプログラムファイルのこと
+- **コンパイル（Compile）**: プログラムをマイコンが理解できる形式に変換すること
+- **アップロード（Upload）**: コンパイルしたプログラムをマイコンに書き込むこと
+- **シリアルモニター**: マイコンとPCの間でデータをやり取りするための画面
+
+#### Arduino IDEの画面構成
+Arduino IDEを開くと、以下のような画面が表示されます：
+![Arduino IDE画面](attachments/画像40.png)
+  - メニューバー（ファイル、編集、スケッチ、ツールなど）
+  - コードエディタ（中央の白い部分）
+  - ツールバー（コンパイル、アップロードボタン）
+  - メッセージエリア（下部の黒い部分）
+
+#### 基本的な操作
+
+1. **ファイルを開く**: `ファイル > 開く` または `Ctrl+O`（Windows）/ `Cmd+O`（Mac）
+2. **コンパイル**: `スケッチ > 検証/コンパイル` または `Ctrl+R`（Windows）/ `Cmd+R`（Mac）
+3. **アップロード**: `スケッチ > アップロード` または `Ctrl+U`（Windows）/ `Cmd+U`（Mac）
+4. **シリアルモニターを開く**: `ツール > シリアルモニター` または `Ctrl+Shift+M`（Windows）/ `Cmd+Shift+M`（Mac）
+
+### 2.2. Arduino IDEのインストール
 
 1. [Arduino IDE公式サイト](https://www.arduino.cc/en/software)からダウンロード
 2. インストーラーを実行してインストール
@@ -78,7 +105,7 @@
 > 画像のようにSoftware Updateが表示される場合、更新の必要がない場合は「NOT NOW」を押してください。
 > ![アップデートの表示対処方法](attachments/fig11-1.png)
 
-### 2.2. ESP32ボードの追加
+### 2.3. ESP32ボードの追加
 
 Arduino IDEには最初からESP32の設定が入っていないので、追加する必要があります。
 
@@ -125,7 +152,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 ![ESP32とM5Stackインストール確認](attachments/fig1-7.png)
 
-### 2.3. ライブラリのインストール
+### 2.4. ライブラリのインストール
 
 以下のライブラリをインストールします：
 
@@ -149,7 +176,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
    - 「Adafruit BME280 Library by Adafruit」バージョン2.3.0をインストール
    - インストール時に依存ライブラリ（Adafruit Unified Sensor）も一緒にインストールされます
 
-### 2.4. USBドライバのインストール
+### 2.5. USBドライバのインストール
 
 1. https://docs.m5stack.com/en/download このサイトからCP210x_VCP_Windows をダウンロードして展開
 2. CP210xVCPInstaller_x64_v6.7.0.0.exeというファイルを実行してドライバーのインストール
@@ -209,34 +236,6 @@ VSCodeでターミナルを開く方法は3つあります：
    ```
 
 ---
-
-### 2.5. Arduino IDEの基本操作
-
-#### Arduino IDEとは？
-
-**Arduino IDE**は、ArduinoやESP32などのマイコンにプログラムを書き込むためのソフトウェアです。無料でダウンロードできます。
-
-#### 基本的な用語
-
-- **スケッチ（Sketch）**: Arduinoのプログラムファイルのこと
-- **コンパイル（Compile）**: プログラムをマイコンが理解できる形式に変換すること
-- **アップロード（Upload）**: コンパイルしたプログラムをマイコンに書き込むこと
-- **シリアルモニター**: マイコンとPCの間でデータをやり取りするための画面
-
-#### Arduino IDEの画面構成
-Arduino IDEを開くと、以下のような画面が表示されます：
-![Arduino IDE画面](attachments/画像40.png)
-  - メニューバー（ファイル、編集、スケッチ、ツールなど）
-  - コードエディタ（中央の白い部分）
-  - ツールバー（コンパイル、アップロードボタン）
-  - メッセージエリア（下部の黒い部分）
-
-#### 基本的な操作
-
-1. **ファイルを開く**: `ファイル > 開く` または `Ctrl+O`（Windows）/ `Cmd+O`（Mac）
-2. **コンパイル**: `スケッチ > 検証/コンパイル` または `Ctrl+R`（Windows）/ `Cmd+R`（Mac）
-3. **アップロード**: `スケッチ > アップロード` または `Ctrl+U`（Windows）/ `Cmd+U`（Mac）
-4. **シリアルモニターを開く**: `ツール > シリアルモニター` または `Ctrl+Shift+M`（Windows）/ `Cmd+Shift+M`（Mac）
 
 ## 4. センサーと通信方式について
 
